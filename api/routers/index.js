@@ -1,0 +1,11 @@
+import express from "express";
+import routerPro from "./products.js";
+import routerCategory from "./category.js";
+import authRouter from "./auth.js";
+import routerCart from "./cart.js";
+const router = express.Router();
+router.use("/products", routerPro);
+router.use("/categories", routerCategory);
+router.use("/auth", authRouter);
+router.use("/users", routerCart);
+export default router;
